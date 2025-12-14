@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>BR Simple Contact</name>
+    <author>Janderson Moreira</author>
+    <creationDate>December 2025</creationDate>
+    <copyright>Copyright (c) 2025 Janderson Moreira. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>jandersonmm@gmail.com</authorEmail>
+    <version>1.0.0</version>
+    <description>MOD_BR_SIMPLE_CONTACT_XML_DESCRIPTION</description>
+
+    <namespace path="src">Br\Module\SimpleContact</namespace>
+
+    <files>
+        <filename module="mod_br_simple_contact">mod_br_simple_contact.php</filename>
+        <folder>src</folder>
+        <folder>services</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                    name="recipient_email" 
+                    type="email" 
+                    label="MOD_BR_SIMPLE_CONTACT_FIELD_RECIPIENT_LABEL"
+                    description="MOD_BR_SIMPLE_CONTACT_FIELD_RECIPIENT_DESC"
+                    required="true"
+                    validate="email"
+                />
+
+                <field 
+                    name="email_subject" 
+                    type="text" 
+                    default="CONTATOS PELO SITE!"
+                    label="MOD_BR_SIMPLE_CONTACT_FIELD_SUBJECT_LABEL"
+                    description="MOD_BR_SIMPLE_CONTACT_FIELD_SUBJECT_DESC"
+                />
+
+                <field 
+                    name="success_message" 
+                    type="textarea" 
+                    default="Obrigado por entrar em contato! Responderemos o mais breve possível!"
+                    label="MOD_BR_SIMPLE_CONTACT_FIELD_SUCCESS_MSG_LABEL"
+                    description="MOD_BR_SIMPLE_CONTACT_FIELD_SUCCESS_MSG_DESC"
+                    rows="3"
+                    filter="raw"
+                />
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                />
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="COM_MODULES_FIELD_MODULE_LAYOUT_LABEL"
+                    description="COM_MODULES_FIELD_MODULE_LAYOUT_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
