@@ -1,9 +1,8 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  mod_br_simple_contact
- *
- * @copyright   Copyright (c) 2025 Janderson Moreira. All rights reserved.
+ * @package     BR Simple Contact
+ * @author      Janderson Moreira
+ * @copyright   Copyright (C) 2026 Janderson Moreira
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 

@@ -2,12 +2,17 @@
 <extension type="module" client="site" method="upgrade">
     <name>BR Simple Contact</name>
     <author>Janderson Moreira</author>
-    <creationDate>December 2025</creationDate>
-    <copyright>Copyright (c) 2025 Janderson Moreira. All rights reserved.</copyright>
+    <creationDate>February 2026</creationDate>
+    <copyright>Copyright (c) 2026 Janderson Moreira. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>jandersonmm@gmail.com</authorEmail>
-    <version>1.0.0</version>
+    <authorUrl>https://github.com/jandersk8</authorUrl>
+    <version>1.0</version>
     <description>MOD_BR_SIMPLE_CONTACT_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <server type="extension" priority="1" name="BR Simple Contact Updates">https://raw.githubusercontent.com/jandersk8/mod_br_simple_contact/main/update.xml</server>
+    </updateservers>
 
     <namespace path="src">Br\Module\SimpleContact</namespace>
 
@@ -17,7 +22,17 @@
         <folder>services</folder>
         <folder>tmpl</folder>
         <folder>language</folder>
+        <file>LICENSE.txt</file>
     </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_br_simple_contact.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_br_simple_contact.sys.ini</language>
+        <language tag="pt-BR">language/pt-BR/pt-BR.mod_br_simple_contact.ini</language>
+        <language tag="pt-BR">language/pt-BR/pt-BR.mod_br_simple_contact.sys.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.mod_br_simple_contact.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.mod_br_simple_contact.sys.ini</language>
+    </languages>
 
     <config>
         <fields name="params">
@@ -30,7 +45,6 @@
                     required="true"
                     validate="email"
                 />
-
                 <field 
                     name="email_subject" 
                     type="text" 
@@ -38,7 +52,6 @@
                     label="MOD_BR_SIMPLE_CONTACT_FIELD_SUBJECT_LABEL"
                     description="MOD_BR_SIMPLE_CONTACT_FIELD_SUBJECT_DESC"
                 />
-
                 <field 
                     name="success_message" 
                     type="textarea" 
@@ -49,20 +62,9 @@
                     filter="raw"
                 />
             </fieldset>
-
             <fieldset name="advanced">
-                <field
-                    name="moduleclass_sfx"
-                    type="text"
-                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
-                />
-                <field
-                    name="layout"
-                    type="modulelayout"
-                    label="COM_MODULES_FIELD_MODULE_LAYOUT_LABEL"
-                    description="COM_MODULES_FIELD_MODULE_LAYOUT_DESC"
-                />
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
+                <field name="layout" type="modulelayout" label="COM_MODULES_FIELD_MODULE_LAYOUT_LABEL" />
             </fieldset>
         </fields>
     </config>
